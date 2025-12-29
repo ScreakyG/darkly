@@ -1,0 +1,14 @@
+Plusieurs choses a noter sur ce formulaire :
+- la fonction checkForm() n'existe quand on clique sur "Sign Guestbook"
+- la variable utilise pour verifier l'input du commentaire est "mtxMessage" alors que le form possede un input "mtxtMessage"
+
+Ce qui veut dire que la validation cote frontend est pas vraiment fonctionnelle , elle fonctionne pour verifier si le username n'est pas vide mais ne check rien pour le commentaire.
+
+En essayant d'injecter un script dans le commentaire celui ci ne semble pas pris en compte, alors que dans le username on dirait que aucune validation n'est faite dans le back car celui ci
+interprete vraiment les tags html que on lui envoie.
+
+Un simple <script> en username a suffi pour recuperer le flag.
+
+Comment proteger :
+
+- S'assurer de echapper le html sur tout les inputs du form, comme cela semble etre le cas sur le commentaire.
