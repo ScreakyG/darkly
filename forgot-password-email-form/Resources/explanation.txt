@@ -1,0 +1,2 @@
+Dans forgot password , l'input pour ecrire son mail n'est pas visible, en inspectant le form on remarque que il y a deja une valeur ecrite , si on change cette valeur par n'importe quoi d'autre on obtient le flag.
+Le serveur semble hardcode une reponse pour le mail "webmaster@borntosec.com", toute autre reponse nous donne le flag.
