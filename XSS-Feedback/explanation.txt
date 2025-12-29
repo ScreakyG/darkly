@@ -8,6 +8,7 @@ En essayant d'injecter un script dans le commentaire celui ci ne semble pas pris
 interprete vraiment les tags html que on lui envoie.
 
 Un simple <script> en username a suffi pour recuperer le flag.
+- Update : Il semble que le commentaire de doit pas etre vide egalement.
 
 Comment proteger :
 
