@@ -21,4 +21,4 @@ Surname : If you read this just use this md5 decode lowercase then sha256 to win
 
 7/ En essayant de trouver le mot correspondant au hash md5 1928e8083cf461a51303633093573c46 (toujours avec ce site https://hashes.com/en/decrypt/hash) on obtient le mot "albatroz"
 
-8/ En hashant le mot "albatroz" avec sha256sum on obtient le flag.
+8/ En hashant le mot "albatroz" avec sha256sum on obtient le flag. (Note : attention au /n quand on hash albatroz, en faisant echo "albatroz" > hash.txt cela rajoute un \n);
