@@ -13,3 +13,9 @@ Il semble que le serveur regarde simplement le Content-Type, en uploadant un scr
 
 Outils utilise:
 -Burp , mais il doit etre possible de le faire sans directement dans le navigatueur ou via curl ?
+
+Comment se defendre:
+
+-Ne pas se fier au Content-Type seulement car il est facilement manipulable par le client.
+-On peut scanner le fichier avec des antivirus pour checker les menaces
+-Ouvrir le fichier pour verifier si on arrive a faire ce qui etait prevu avec ? Exemple sharp pour node js dans Camagru ?
