@@ -11,3 +11,11 @@ Injection qui permet de lister les columns des tables :
 
 Celle ci retourne les usernames et passswords de la db_default ( celle ou sont stockee les users).
 1 UNION SELECT username, password FROM Member_Brute_Force.db_default
+
+On obtient donc le hash des mdp pour le compte root/admin : 3bf1114a986ba87ed28fc1b5884fc2f8
+
+Maintenant on peut essayer de brute force le hash et obtenir le mot de passe si celui ci n'est pas robuste.
+
+On obtient "shadow" ce qui est peu securise.
+
+On peu se log maintenant avec admin/shadow et on obtient le flag.
