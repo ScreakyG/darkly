@@ -1,0 +1,15 @@
+Plusieurs observations sur le file upload :
+
+- Cote client il n'y a que une seule verification qui est la taille (MAX = 10000 octet / 10KB)
+- Jpg/Jpeg seulement accepte.
+- Je peux envoyer un jpg qui contient un script
+- Le nom du fichier est renvoye au front + montrant le dossier /tmp/xxxx.jpg
+
+Explication :
+
+Il semble que le serveur regarde simplement le Content-Type, en uploadant un script php tout en gardant le Content-Type: image/jpeg le fichier est quand meme upload alors que c'est un script php
+
+/tmp/phpscript.php succesfully uploaded.
+
+Outils utilise:
+-Burp , mais il doit etre possible de le faire sans directement dans le navigatueur ou via curl ?
