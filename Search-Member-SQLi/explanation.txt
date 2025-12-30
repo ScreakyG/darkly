@@ -19,3 +19,9 @@ Maintenant on peut essayer de brute force le hash et obtenir le mot de passe si 
 On obtient "shadow" ce qui est peu securise.
 
 On peu se log maintenant avec admin/shadow et on obtient le flag.
+
+Comment se defendre:
+
+- Requetes preparees pour SQL
+- Meme si on recupere les donnees de la DB les mots de passes aurait etes plus safes si le hash etait plus robuste (avec du salt par exemple).
+- Le salt ralenti le processus et donne des outputs differents pour un meme mot de passe.
