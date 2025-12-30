@@ -1,0 +1,6 @@
+L'input select propose des valeurs allant de 1 a 10.
+Il est possible de modifier directement dans le html la value des options et mettre ce que l'on veut pour obtenir le flag.
+
+Defense :
+
+Verifier les valeurs envoyee par le form et valider une range.
