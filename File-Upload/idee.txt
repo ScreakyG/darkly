@@ -3,4 +3,4 @@ Plusieurs observations sur le file upload :
 - Cote client il n'y a que une seule verification qui est la taille (MAX = 10000 octet / 10KB)
 - Jpg/Jpeg seulement accepte.
 - Je peux envoyer un jpg qui contient un script
-- Le nom du fichier est renvoye au front + montrant le dossier /tmp/xxxx.jpg
+- Le nom du fichier est renvoye au front + montrant le dossier /tmp/xxxx.jpg 

