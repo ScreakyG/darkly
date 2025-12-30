@@ -1,0 +1,14 @@
+En regardant nos cookies fournis par le site on en a 1 qui s'appelle :
+name: I_am_admin
+value: b326b5062b2f0e69046810717534cb09
+
+Par curiosite en cherchant le hash dans une lookup table :
+- le hash utilise md5
+- le hash correspond au mot "false"
+- si je hash le mot "true" avec md5 et que je le remplace dans mon cookie j'obtient le flag
+
+Defense :
+
+- Tres mauvaise idee si c'est un cookie validant une permission.
+- Changer l'auth pour des token hash en DB et renvoyer au front le non hash ?
+- Utiliser un JWT pour valider des permissions avec des purposes dans le payload ?
