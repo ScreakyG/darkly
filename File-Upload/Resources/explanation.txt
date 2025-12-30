@@ -17,5 +17,9 @@ Outils utilise:
 Comment se defendre:
 
 -Ne pas se fier au Content-Type seulement car il est facilement manipulable par le client.
+-Ajouter verification de l'extension est un plus mais pas suffisant
 -On peut scanner le fichier avec des antivirus pour checker les menaces
 -Ouvrir le fichier pour verifier si on arrive a faire ce qui etait prevu avec ? Exemple sharp pour node js dans Camagru ?
+-Rename le fichier et ne pas garder le nom choisit par le user
+-Forcer une extension ?
+-Ne pas indiquer de path dans lequel il est save (ici /tmp/)
