@@ -4,7 +4,7 @@
 !_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
 !_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
-!_TAG_PROC_CWD	/home/florian/darkly-valid/	//
+!_TAG_PROC_CWD	/home/florian/darkly-last/	//
 !_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
@@ -14,17 +14,24 @@ Définition d’une attaque path traversal	path-traversal/Ressources/how.md	/^# 
 Fix	header_request/Ressources/how.md	/^# Fix$/;"	c
 breach	header_request/Ressources/how.md	/^# breach$/;"	c
 command	brute-force-login/Ressources/how.md	/^# command$/;"	c
+command	robots-.hidden/Ressources/how.md	/^# command$/;"	c
 command returns:	header_request/Ressources/how.md	/^# command returns:$/;"	c
 command used	header_request/Ressources/how.md	/^# command used $/;"	c
 definition	htpasswd-public/Ressources/how.md	/^# definition$/;"	c
+explaination	bad-redirection/Ressources/how.md	/^# explaination$/;"	c
 explaination	htpasswd-public/Ressources/how.md	/^# explaination$/;"	c
+explaination	robots-.hidden/Ressources/how.md	/^# explaination$/;"	c
+fix	bad-redirection/Ressources/how.md	/^# fix$/;"	c
 fix	brute-force-login/Ressources/how.md	/^# fix$/;"	c
 fix	htpasswd-public/Ressources/how.md	/^# fix $/;"	c
 fix	path-traversal/Ressources/how.md	/^# fix$/;"	c
+fix	robots-.hidden/Ressources/how.md	/^# fix$/;"	c
 impact	header_request/Ressources/how.md	/^# impact$/;"	c
 infos	header_request/Ressources/how.md	/^# infos $/;"	c
+risk	bad-redirection/Ressources/how.md	/^# risk $/;"	c
 risk	brute-force-login/Ressources/how.md	/^# risk$/;"	c
 risk	htpasswd-public/Ressources/how.md	/^# risk$/;"	c
 risk	path-traversal/Ressources/how.md	/^# risk$/;"	c
+use case	robots-.hidden/Ressources/how.md	/^# use case$/;"	c
 vulnerabilite	brute-force-login/Ressources/how.md	/^# vulnerabilite$/;"	c
 vulnerabilite	path-traversal/Ressources/how.md	/^# vulnerabilite$/;"	c
