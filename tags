@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_EXCMD	mixed	/number, pattern, mixed, or combineV2/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
+!_TAG_PROC_CWD	/home/florian/darkly-valid/	//
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	5.9.0	//
+Définition de bruteforce	brute-force-login/Ressources/how.md	/^# Définition de bruteforce$/;"	c
+Définition d’une attaque path traversal	path-traversal/Ressources/how.md	/^# Définition d’une attaque path traversal$/;"	c
+Fix	header_request/Ressources/how.md	/^# Fix$/;"	c
+breach	header_request/Ressources/how.md	/^# breach$/;"	c
+command	brute-force-login/Ressources/how.md	/^# command$/;"	c
+command returns:	header_request/Ressources/how.md	/^# command returns:$/;"	c
+command used	header_request/Ressources/how.md	/^# command used $/;"	c
+definition	htpasswd-public/Ressources/how.md	/^# definition$/;"	c
+explaination	htpasswd-public/Ressources/how.md	/^# explaination$/;"	c
+fix	brute-force-login/Ressources/how.md	/^# fix$/;"	c
+fix	htpasswd-public/Ressources/how.md	/^# fix $/;"	c
+fix	path-traversal/Ressources/how.md	/^# fix$/;"	c
+impact	header_request/Ressources/how.md	/^# impact$/;"	c
+infos	header_request/Ressources/how.md	/^# infos $/;"	c
+risk	brute-force-login/Ressources/how.md	/^# risk$/;"	c
+risk	htpasswd-public/Ressources/how.md	/^# risk$/;"	c
+risk	path-traversal/Ressources/how.md	/^# risk$/;"	c
+vulnerabilite	brute-force-login/Ressources/how.md	/^# vulnerabilite$/;"	c
+vulnerabilite	path-traversal/Ressources/how.md	/^# vulnerabilite$/;"	c
