@@ -7,8 +7,8 @@ Ce qui veut dire que la validation cote frontend est pas vraiment fonctionnelle 
 En essayant d'injecter un script dans le commentaire celui ci ne semble pas pris en compte, alors que dans le username on dirait que aucune validation n'est faite dans le back car celui ci
 interprete vraiment les tags html que on lui envoie.
 
-Un simple <script> en username a suffi pour recuperer le flag.
 - Update : Il semble que le commentaire de doit pas etre vide egalement.
+- Update: <script> et <img> ne fonctionne pas pour l'attaque , mais une injection avec un svg marche : <svg/onload=alert('XSS')>
 
 Comment proteger :
 
