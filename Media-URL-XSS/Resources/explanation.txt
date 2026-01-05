@@ -1,0 +1,24 @@
+La page permettant de charger l'image de nsa_prism.jpg nous donne un indice sur une potentielle faille.
+Le resultat de notre requete est renvoyee dans un object qui charge une page HTML,
+
+Une page HTML est renvoyee avec marquee "404:Not Found" si on change la "src" vers un document qui n'existe pas.
+
+On peut essayer de faire une attaque XSS via ceci en wrappant du HTML autour du javascript comme ceci : data:text/html,<script>alert(0)</script>
+Si on ecrit donc ceci apres "src=": data:text/html,<script>alert(0)</script>
+Notre bout de HTML est bien renvoyee par le serveur et le HTML est injectee sur la page mais ce n'est pas suffisant pour avoir le flag.
+
+Si on inspecte le resultat on voit bien que le <script> est present mais gris, si on essaye <div>hello world</div> on verra bien notre div dans la page.
+Pour contourner la desactivation du script il faudrait peut etre l'encoder en base64 et bingo le flag nous apparait.
+
+
+data:text/html;base64,PHNjcmlwdD5hbGVydCgwKTwvc2NyaXB0Pg==
+
+En resume il n'y a pas de filtres car notre HTML est present meme sans encodage mais on peut imaginer que le sujet veut nous faire comprendre que en mettant en base64
+on peut bypass des filtres pas tres robustes.
+
+Defense:
+
+- empecher le schema "data:"
+- le serveur ne verifie pas le contenu de "src" convenablement.
+
+- Bien config CSP (a creuser)
