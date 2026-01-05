@@ -22,3 +22,32 @@ Defense:
 - le serveur ne verifie pas le contenu de "src" convenablement.
 
 - Bien config CSP (a creuser)
+
+
+Meilleure explication :
+
+- Le site possede un <object data=$src> , $src est une variable qui est indique dans l'URL
+- Si on change cette variable celle ci est envoyee au serveur et il nous renvoi la page avec cette variable mise dans $src
+- Le navigateur fait une requete si necessaire lorsque la valeur dans data est relative par exemple si src="test" fera http://localhost:8080/test
+- Si maintenant on met directement un code html sous forme "data:text/html,<script>alert(0)</script>", le navigateur ne fera pas de requete et notre HTML cera integree a la page.
+- Mais ce n'est apparement pas suffisant pour recuperer le flag, alors si on va plus long et que l'on met notre data en base64 fonctionne. "data:text/html;base64,<BASE64HTML>" (convertir notre HTML en base64 avant).
+
+Pourquoi cela marche ?
+
+- Il semble ne pas y avoir de verification de ce que l'on passe en valeur de src, on change la valeur et le serveur nous renvoi du html avec la data de objet a la valeur de src.
+- Lorsque l'on met un simple mot comme "test" dans src on va obtenir un 404, c'est nornal car dans ce cas le navigateur va interpreter cela comme un chemin relatif "http://localhost:8080/test" et test n'existant pas on obtient 404.
+- Mais si on fournit directement notre data le serveur ne verifie rien met tout de meme dans data notre propre html , et a l'execution le naviagateur n'envoi meme pas de requete au serveur et integre directement notre HTML.
+
+Comment se proteger ?
+
+- Ne pas interger une variable du client dans du HTML directement, echapper le HTML au parsing
+- Restreindre les schemas d'URL (empecher ce qui commence par data d'etre valide par exemple)
+- Eviter <object> et <iframe> qui sont des vecteurs d'attaque
+- Content Security Policy (CSP) qui agit comme un Pare-feu cote navigateur, le serveur configure la CSP et indique au navigateur des regles sur ce qu'il a le droit de charger/executer.
+  Content-Security-Policy: script-src 'self' -> Protection contre les XSS, bloque ce genre de choses : <script>alert(1)</script>, data: suivi de script, onclick="..."
+  Content-Security-Policy: default-src 'self' -> Autorise seulement les ressources venant du site lui meme
+  Content-Security-Policy: object-src: 'none' -> interdit l'utilisation d'elements comme <object>
+  Il en existe d'autre regles.
+
+Le CSP agit comme un dernier rempart pour certaines failles.
+
